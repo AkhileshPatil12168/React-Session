@@ -1,0 +1,59 @@
+p {
+  font-size: 25px;
+}
+
+body {
+  font-family: "Dancing Script", sans-serif;
+}
+
+a {
+  font-weight: bolder;
+}
+
+.aboutMe {
+  color: #399480;
+}
+h1 {
+  /* font-family: ; */
+  color: black;
+}
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+#pTag {
+  color: black;
+  text-align: justify;
+  /* text-transform: ; */
+  /* font-display: ; */
+  /* line-break:; */
+}
+
+.outerDiv {
+  background-color: darkgray;
+  width: 50%;
+  height: 200px;
+}
+
+.innerDiv {
+  background-color: red;
+  width: 25%;
+  height: 50px;
+  /* margin: 50px; */
+
+  /* border: 5px dashed black; */
+}
+
+@media (min-width: 768px) {
+  #pTag {
+    font-size: 20px;
+    color: red;
+    text-align: unset;
+  }
+  h2 {
+    color: blue;
+  }
+}
