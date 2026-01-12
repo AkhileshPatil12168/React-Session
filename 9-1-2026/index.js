@@ -136,5 +136,20 @@
 // console.log(newArr)
 // console.log(arr)
 
+//slice
+// let arr = ["a", "b", "c", "d", "asdf","e"];
+// let arr2 = [1, 2, 3, 4];
 
+// let result = arr.slice(2, -2);
+// // let result2 = arr2.slice(-2);/
 
+// console.log(result);
+// // console.log(result2);
+// console.log(arr);
+
+//sort
+// let arr2 = [1, 2, 3, 4, 11, 20, 33];
+
+// console.log(arr2[arr2.length - 1]);
+
+// console.log(arr2.sort((a, b) => b - a));
