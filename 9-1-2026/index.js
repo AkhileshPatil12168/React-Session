@@ -75,4 +75,66 @@
 
 // console.log(filtredArr);
 
+//reduce
+// let arr = [1, 2, 3, 4];
+
+// let result = arr.reduce((total, value) => total + value, 10);
+// console.log(result);
+
+// push and pop
+
+// let arr = [1,2,3,10]
+// // let result = arr.push("a")
+// let result = arr.pop()
+// console.log(arr)
+// console.log(result)
+
+// spread and rest operator  "..."
+
+// let arr = ["a", 10, ["b"], "hello"]
+// let arr2 = [1,2,3]
+
+// let arr2 = arr
+// let arr3 = [...arr, ...arr2]
+// // arr2.push(10)
+// console.log(arr==arr2)
+
+// console.log(arr3)
+// console.log(arr2)
+
+// let arr = ["a", 10, ["b"], "hello"];
+
+// let [a, b, ...c] = arr;
+
+// console.log(a)
+// console.log(b)
+// console.log(c)
+// console.log(arr)
+
+//Array destructuring
+// let arr = ["a", 10, ["b"], "hello"];
+
+// let [a, , , d] = arr;
+
+// console.log(a,d);
+
+//array methods
+//1.concat
+// let arr = [ 10, ["b"], "hello", "hello"];
+// let arr2 = [1, 2, 3];
+// let mixed = arr2.concat(arr);
+// // console.log(mixed);
+
+// const ele = arr.findIndex((v) => typeof v == "string");
+// console.log(ele)
+
+//shift
+// arr.unshift("a")
+// console.log(arr)
+
+// let newArr = arr.splice(1, 2,"abcd")
+// console.log(newArr)
+// console.log(arr)
+
+
 
