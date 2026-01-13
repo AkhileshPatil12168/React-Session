@@ -153,3 +153,10 @@
 // console.log(arr2[arr2.length - 1]);
 
 // console.log(arr2.sort((a, b) => b - a));
+
+// let arr2 = [1, 2, 3, 4, 11, 20, 33];
+
+// for (let ele of arr2){
+//     console.log(ele)
+// }
+
