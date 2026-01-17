@@ -62,12 +62,68 @@
 
 //import export
 
-export let a = 10;
-export function abc (a){
-    console.log("hello")
-}
+// export let a = 10;
+// export function abc(a) {
+//   console.log("hello");
+// }
 
 //closer
+
+// function perentFun() {
+//   let a = 10;
+//   let b = { name: "abc" };
+
+//   function childFun() {
+//     let x = 20;
+//     let sum = a + x;
+//     console.log(sum);
+//     console.log(b.name);
+
+//     return "hello"
+//   }
+
+// //   console.log(x)
+
+//   return childFun;
+// }
+
+// export const returnFun = perentFun()
+
+// console.log(returnFun)
+
 //try catch
+
+// function checkErrors(a) {
+//   try {
+//     if (!a) throw new Error("a value is not available");
+//     if (a < 10) throw new Error("a value is less then 10");
+//     console.log(a);
+//   } catch (error) {
+//     console.log(error);
+//   }finally{
+//     console.log("try catch worked")
+//   }
+// }
+// console.log("hello")
+
+// checkErrors(9);
+// console.log("hello")
+
 //math
+//round
+//abs
+//ceil
+//floor
+//max min
+//random
 //
+// let a = 10;
+// let b = 20;
+// // console.log(a)
+// for(let i=0; i<=10; i++){
+//     // console.log()
+//     console.log(Math.round(Math.random()*1000000000));
+// }
+
+//0.0000000000000001
+//0.9999999999999999
