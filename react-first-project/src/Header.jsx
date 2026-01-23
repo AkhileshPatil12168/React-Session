@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export const Header = () => {
   return (
-    <div style={{ height: "100px", width: "100%", backgroundColor: "gray" }}>
+    <div className="h-10 w-full bg-gray-200">
       Header
       <Button />
     </div>
