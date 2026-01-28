@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./Button";
 import Card from "./Card";
 
@@ -16,11 +17,19 @@ function Body({ data }) {
   //   let data = {};
   //   const typeClass = `type-${data.type.toLowerCase()}`;
 
+let [value, setValue]  = useState("click")
+
+  // let value = 10
+  const clickEvent = (e) => {
+    setValue("clicked")
+  };
+  console.log(value)
+
   return (
     <>
-      <div className="h-screen w-full grid grid-cols-2 grid-rows-3 gap-5">
+      {/* <div className="h-screen w-full grid grid-cols-2 grid-rows-3 gap-5">
         <div className="bg-red-500 w-full">
-          {/* <div className="bg-white size-full text-blue-500 text- font"></div> */}
+          <div className="bg-white size-full text-blue-500 text- font"></div>
         </div>
         <div className="bg-green-500 w-full"></div>
         <div className="bg-green-500 w-full"></div>
@@ -33,12 +42,29 @@ function Body({ data }) {
         <div className="bg-green-500 w-full"></div>
     
 
-      </div>
+      </div> */}
       {/* <div className="grid grid-cols-3 p-10 gap-y-10">
         {data?.map((obj, index) => (
           <Card key={index} data={obj}></Card>
         ))}
       </div> */}
+
+      <div className="h-screen bg-red-100 p-20">
+        {/* <Button >
+          <p>click</p>
+        </Button> */}
+<p>{value}</p>
+        <button
+          // disabled = {true}
+          // hidden = {false}
+          name="abc"
+          value="123"
+          onClick={clickEvent}
+          className="px-4 py-2 rounded-lg font-semibold bg-blue-500"
+        >
+          click me
+        </button>
+      </div>
     </>
   );
 }
