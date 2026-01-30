@@ -1,0 +1,35 @@
+Task 1: Color Changing Box
+
+Create a square box (e.g., 150px × 150px) with a default background color.
+
+When the user clicks:
+    Either on the box itself
+    OR on a button below it
+
+The box color should change to a different color.
+
+You can:
+    Use random colors
+    OR switch between predefined colors (red, blue, green, yellow, etc.)
+
+----------------------------------------------------
+Task 2: Color Change Counter
+
+Display a counter below the box.
+
+The counter should:
+    Start from 0
+    Increase by 1 every time the color changes
+
+Show text like:
+    Color changed: 5 times
+
+-------------------------------------------
+Bonus (Optional)
+
+Add a Reset button to:
+    Set color back to default
+    Reset counter to 0
+
+Prevent same color repeating twice in a row
+Add smooth transition effect
