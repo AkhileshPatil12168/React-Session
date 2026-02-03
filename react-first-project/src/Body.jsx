@@ -1,119 +1,99 @@
 import { useState } from "react";
-import Button from "./Button";
-import Card from "./Card";
 
-export function Abc() {
-  return (
-    <div>
-      <p>hello</p>
-      <span className=" top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 shadow-md">
-        ⚡ HP
-      </span>
-    </div>
-  );
-}
+//form
+//submit and show data
 
 function Body() {
+  let [name, setName] = useState("");
   let [email, setEmail] = useState("");
+  let [phone, setPhone] = useState("");
   let [password, setPassword] = useState("");
-  let [type, setType] = useState("password");
-  let [bgColor, setBgColor] = useState("green");
+  let [submitedData, setSubmitedData] = useState(null);
+  let [isLoading, setIsLoading] = useState(false);
 
-  const loginButton = () => {
-    alert(`${email}    ${password}`);
+  const submitData = (e) => {
+    console.log("submitting");
+    setIsLoading(true);
+    e.preventDefault();
+    let data = {
+      name,
+      email,
+      phone,
+      password,
+    };
+    setTimeout(() => {
+      alert(JSON.stringify(data));
+      setIsLoading(false);
+    }, 5000);
+
+    // console.log(data);
   };
+
+  const handleChanges = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    if (name == "name") setName(value);
+    else if (name == "email") setEmail(value);
+    else if (name == "phone") setPhone(value);
+    else if (name == "password") setPassword(value);
+
+    return "";
+  };
+  // console.log(name)
+
   return (
-    <div className={`h-screen  p-20`}>
-      <div className="flex gap-5 items-center">
-        <label>Email: </label>
-        <input
-          className="border-2"
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
+    <div className="min-h-screen">
+      <form
+        onSubmit={submitData}
+        className="p-10 flex flex-col max-w-[60%] gap-2"
+      >
+        <div className="w-full">
+          <label>name</label>
+          <input
+            className="border w-full"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChanges}
+          ></input>
+        </div>
+        <div>
+          <label>email</label>
+          <input
+            className="border w-full"
+            required={true}
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChanges}
+          ></input>
+        </div>
+        <div>
+          <label>phone</label>
+          <input
+            className="border w-full"
+            type="tel"
+            name="phone"
+            value={phone}
+            onChange={handleChanges}
+          ></input>
+        </div>
+        <div>
+          <label>password</label>
+          <input
+            className="border w-full"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChanges}
+          ></input>
+        </div>
 
-        <label>Password: </label>
-        <input
-          className="border-2"
-          type={type}
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button
-          onClick={() => {
-            type == "password" ? setType("text") : setType("password");
-            // bgColor == "red" ? setBgColor("green") : setBgColor("red");
-          }}
-        >
-          {type == "text" ? (
-            <svg
-              className="size-10"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <path
-                  d="M2.99902 3L20.999 21M9.8433 9.91364C9.32066 10.4536 8.99902 11.1892 8.99902 12C8.99902 13.6569 10.3422 15 11.999 15C12.8215 15 13.5667 14.669 14.1086 14.133M6.49902 6.64715C4.59972 7.90034 3.15305 9.78394 2.45703 12C3.73128 16.0571 7.52159 19 11.9992 19C13.9881 19 15.8414 18.4194 17.3988 17.4184M10.999 5.04939C11.328 5.01673 11.6617 5 11.9992 5C16.4769 5 20.2672 7.94291 21.5414 12C21.2607 12.894 20.8577 13.7338 20.3522 14.5"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>{" "}
-              </g>
-            </svg>
-          ) : (
-            <svg
-              className="size-10"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <path
-                  d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>{" "}
-                <path
-                  d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>{" "}
-              </g>
-            </svg>
-          )}
+        <button disabled={isLoading} type="submit" className="py-2 bg-blue-500">
+          {isLoading ? "please wait..." : "submit"}
         </button>
-
-        <button
-          className="bg-blue-500 px-5 py-2 rounded-md"
-          onClick={loginButton}
-        >
-          Login
-        </button>
-      </div>
-      {/* <p>Name is : {show}</p> */}
+      </form>
     </div>
   );
 }

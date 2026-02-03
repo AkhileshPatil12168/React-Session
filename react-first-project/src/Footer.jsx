@@ -1,12 +1,5 @@
 import React from "react";
-import Button from "./Button";
 
 export const Footer = () => {
-  return (
-    <div >
-      {" "}
-      Footer
-      <Button/>
-    </div>
-  );
+  return <div className="bg-gray-200 h-30">Footer</div>;
 };

@@ -1,0 +1,4 @@
+
+
+1.create a form with multiple input fileds and use a dropdown (select) 
+2.on submit save the data in local storage
