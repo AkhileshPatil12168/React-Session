@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+
+@theme {
+  --animate-spin-slow: spin 6s linear infinite;
+  --animate-fade-in: fadeIn 1s ease-in-out;
+
+  --animate-spin-slow: spin 6s linear infinite;
+  --animate-fade-in: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
